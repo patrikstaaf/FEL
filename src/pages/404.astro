@@ -4,12 +4,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 let title = "Uh Oh! Page Not Found";
 let description =
   "We couldn't find the page you were looking for, go back to the home page.";
-// let permalink = "https://localhost.com";
+let permalink = "https://exlab.netlify.app/";
 ---
 
 <BaseLayout
   {title}
   {description}
+  {permalink}
   canonicalURL={Astro.request.canonicalURL.href}
 >
   <h1>404</h1>
