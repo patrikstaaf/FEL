@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+let title = "Uh Oh! Page Not Found";
+let description =
+  "We couldn't find the page you were looking for, go back to the home page.";
+// let permalink = "https://localhost.com";
+---
+
+<BaseLayout
+  {title}
+  {description}
+  canonicalURL={Astro.request.canonicalURL.href}
+>
+  <h1>404</h1>
+  <p>Uh Oh! We couldn't find the page you were looking for</p>
+  <a href="/">Return Home</a>
+</BaseLayout>
