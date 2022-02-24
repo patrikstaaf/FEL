@@ -1,0 +1,117 @@
+---
+import SliderItem from "../components/SliderItem.astro";
+import SliderProgressBar from "../components/SliderProgressBar.astro";
+
+const { images } = Astro.props;
+---
+
+<section>
+  <div class="slider-wrap">
+    <div class="slider">
+      <div class="slider-inner">
+        <SliderItem image={images[0]} />
+        <SliderItem image={images[1]} />
+        <SliderItem image={images[2]} />
+        <SliderItem image={images[3]} />
+        <SliderItem image={images[4]} />
+        <SliderItem image={images[5]} />
+        <SliderItem image={images[6]} />
+        <SliderItem image={images[7]} />
+      </div>
+    </div>
+    <SliderProgressBar />
+  </div>
+</section>
+
+<script>
+  const slider = document.querySelector(".slider-inner");
+  const progressBar = document.querySelector(".prog-bar-inner");
+
+  let sliderGrabbed = false;
+
+  function getScrollPercentage() {
+    return (
+      (slider.parentElement.scrollLeft /
+        (slider.parentElement.scrollWidth - slider.parentElement.clientWidth)) *
+      100
+    );
+  }
+
+  slider.addEventListener("mousedown", () => {
+    sliderGrabbed = true;
+    slider.style.cursor = "grabbing";
+  });
+
+  slider.addEventListener("mouseup", () => {
+    sliderGrabbed = false;
+    slider.style.cursor = "grab";
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    sliderGrabbed = false;
+    slider.style.cursor = "grab";
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (sliderGrabbed) {
+      slider.parentElement.scrollLeft -= e.movementX;
+    }
+  });
+
+  //   slider.addEventListener("wheel", (e) => {
+  //     e.preventDefault();
+  //     slider.parentElement.scrollLeft += e.deltaY;
+  //   });
+
+  slider.parentElement.addEventListener("scroll", (e) => {
+    console.log(getScrollPercentage());
+    progressBar.style.width = `${getScrollPercentage()}%`;
+  });
+</script>
+
+<style>
+  .slider-wrap {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 300px;
+    cursor: grab;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2200px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 45px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .slider-inner {
+      width: 3000px;
+    }
+
+    .slider-wrap {
+      height: 500px;
+    }
+  }
+</style>

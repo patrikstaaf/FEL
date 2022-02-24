@@ -1,15 +1,29 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Slider from "../components/Slider.astro";
 // You can import components from any supported Framework here!
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = "Test sidan";
-let description = "test description";
-let permalink = "https://exlab.netlify.app/";
+const title = "Future Experience Lab";
+const description =
+  "Future Experience Lab är en experimentverkstad för att provköra framtiden. Och skapa den.";
+const permalink = "https://exlab.netlify.app/";
+// const image = "/public/images/48h.jpg";
+
+const images = [
+  "/public/images/48h.jpg",
+  "/public/images/akaden.jpg",
+  "/public/images/alfonz.jpg",
+  "/public/images/frihamn.jpg",
+  "/public/images/inner.jpg",
+  "/public/images/silvia.jpg",
+  "/public/images/tjol.jpg",
+  "/public/images/westp.jpg",
+];
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -18,17 +32,12 @@ let permalink = "https://exlab.netlify.app/";
 <BaseLayout
   {title}
   {description}
-  {permalink}
   canonicalURL={Astro.request.canonicalURL.href}
 >
   <p>Main</p>
+  <Slider client:visible {images} />
 </BaseLayout>
 
 <style>
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    max-width: min(100%, 68ch);
-  }
+
 </style>
