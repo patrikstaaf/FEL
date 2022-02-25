@@ -1,6 +1,14 @@
+---
+export interface Props {
+  buttontext: string;
+}
+
+const { buttontext } = Astro.props;
+---
+
 <a href="/">
   <div class="btn-wrapper">
-    <div class="btn-text">Kontakta oss</div>
+    <div class="btn-text">{buttontext}</div>
     <span></span>
     <div class="button">
       <svg
