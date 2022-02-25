@@ -2,6 +2,8 @@
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Slider from "../components/Slider.astro";
+import DesktopButton from "../components/DesktopButton.astro";
+import ContactUsButton from "../components/ContactUsButton.astro";
 // You can import components from any supported Framework here!
 
 // Component Script:
@@ -36,6 +38,8 @@ const images = [
 >
   <p>Main</p>
   <Slider client:visible {images} />
+  <DesktopButton />
+  <ContactUsButton />
 </BaseLayout>
 
 <style>
