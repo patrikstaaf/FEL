@@ -1,1 +1,134 @@
-<nav>Nav</nav>
+ <div class="container">
+    <h1 class="logo">LOGO</h1>
+    <!-- <button class="nav-toggle"></button> -->
+    <nav>
+      <ul>
+        <li class="nav-link-icon">
+          <label for="search"></label>
+          <input type="text" name="search" id="search" placeholder="Search" />
+        </li>
+        <li class="nav-link"><a href="#">LAB</a></li>
+        <li class="nav-link"><a href="#">Partners</a></li>
+        <li class="nav-link"><a href="#">Om oss</a></li>
+        <li class="nav-link-icon">
+          <a href="#"><img src="member.svg" /> Logga in/Bli medlem</a>
+        </li>
+        <li class="nav-link-login">
+          <a href="#">Logga in</a>
+        </li>
+        <li class="nav-link-search">
+          <a href="#"><img src="search.svg" /> </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  background-color: gray;
+  text-align: center;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  width: 100%;
+}
+
+.logo {
+  color: black;
+  padding: 25px 0px 25px 16px;
+  display: none;
+}
+
+/* .nav-toggle {
+  width: 27px;
+  height: 15px;
+  padding: 25px 16px 25px 0px;
+} */
+
+nav {
+  background-color: gray;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  /* display: none; */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 1em 0 0 1em;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+input#search {
+  background-image: url(search.svg);
+  background-repeat: no-repeat;
+  text-indent: 20px;
+  width: 100%;
+  height: 51px;
+}
+li.nav-link-search {
+  display: none;
+}
+
+li.nav-link-login {
+  display: none;
+}
+/* input#search:focus {
+  background-image: none;
+} */
+
+@media screen and (min-width: 650px) {
+  .nav-toggle {
+    display: none;
+  }
+  .container {
+    height: 80px;
+  }
+
+  .logo {
+    color: white;
+    display: block;
+  }
+
+  nav {
+    all: unset;
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 21px 29px 0px 0px;
+  }
+
+  li.nav-link-icon {
+    display: none;
+  }
+  li.nav-link-search {
+    display: block;
+  }
+  li.nav-link-login {
+    display: block;
+  }
+}
+</style>
