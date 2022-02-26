@@ -3,6 +3,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactSection from "../components/ContactSection.astro";
 import LabsSection from "../components/LabsSection.astro";
+import CurrentLabSection from "../components/CurrentLabSection.astro";
 
 // You can import components from any supported Framework here!
 
@@ -35,6 +36,7 @@ const description =
   canonicalURL={Astro.request.canonicalURL.href}
 >
   <!-- <Slider client:visible {images} /> -->
+  <CurrentLabSection />
   <LabsSection />
   <ContactSection />
 </BaseLayout>
