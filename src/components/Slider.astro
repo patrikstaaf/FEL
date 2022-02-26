@@ -2,26 +2,24 @@
 import SliderItem from "../components/SliderItem.astro";
 import SliderProgressBar from "../components/SliderProgressBar.astro";
 
-const { images } = Astro.props;
+const { images, labels } = Astro.props;
 ---
 
-<section>
-  <div class="slider-wrap">
-    <div class="slider">
-      <div class="slider-inner">
-        <SliderItem image={images[0]} />
-        <SliderItem image={images[1]} />
-        <SliderItem image={images[2]} />
-        <SliderItem image={images[3]} />
-        <SliderItem image={images[4]} />
-        <SliderItem image={images[5]} />
-        <SliderItem image={images[6]} />
-        <SliderItem image={images[7]} />
-      </div>
+<div class="slider-wrap">
+  <div class="slider">
+    <div class="slider-inner">
+      <SliderItem image={images[0]} label={labels[0]} />
+      <SliderItem image={images[1]} label={labels[1]} />
+      <SliderItem image={images[2]} label={labels[2]} />
+      <SliderItem image={images[3]} label={labels[3]} />
+      <SliderItem image={images[4]} label={labels[4]} />
+      <SliderItem image={images[5]} label={labels[5]} />
+      <SliderItem image={images[6]} label={labels[6]} />
+      <SliderItem image={images[7]} label={labels[7]} />
     </div>
-    <SliderProgressBar />
   </div>
-</section>
+  <!-- <SliderProgressBar /> -->
+</div>
 
 <script>
   const slider = document.querySelector(".slider-inner");
@@ -72,10 +70,10 @@ const { images } = Astro.props;
 <style>
   .slider-wrap {
     position: absolute;
-    top: 10%;
+    top: 35%;
     left: 5%;
-    width: 90%;
-    height: 300px;
+    width: 95%;
+    /* height: 300px; */
     cursor: grab;
   }
 
@@ -107,11 +105,11 @@ const { images } = Astro.props;
 
   @media screen and (min-width: 600px) {
     .slider-inner {
-      width: 3000px;
+      width: 4300px;
     }
 
     .slider-wrap {
-      height: 500px;
+      height: 580px;
     }
   }
 </style>

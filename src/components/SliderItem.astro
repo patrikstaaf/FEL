@@ -1,13 +1,17 @@
 ---
 export interface Props {
   image: string;
+  label: string;
 }
 
-const { image } = Astro.props;
+const { image, label } = Astro.props;
 ---
 
 <div class="item">
   <img src={image} alt="" draggable="false" />
+  <div class="label-wrapper">
+    <p>{label}</p>
+  </div>
 </div>
 
 <style>
@@ -15,6 +19,8 @@ const { image } = Astro.props;
     width: 250px;
     height: 98%;
     top: 1%;
+    position: relative;
+    cursor: pointer;
   }
 
   .item img {
@@ -23,9 +29,22 @@ const { image } = Astro.props;
     height: 100%;
   }
 
+  .label-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 12%;
+    background-color: #f7e733;
+  }
+
+  .label-wrapper p {
+    font-family: var(--heading);
+    font-size: 62px;
+    padding: 0 8px;
+  }
+
   @media screen and (min-width: 600px) {
     .item {
-      width: 350px;
+      width: 483px;
     }
   }
 </style>
