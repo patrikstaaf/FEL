@@ -2,7 +2,7 @@
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Slider from "../components/Slider.astro";
-import MainButton from "../components/MainButton.astro";
+import ContactSection from "../components/ContactSection.astro";
 
 // You can import components from any supported Framework here!
 
@@ -13,8 +13,6 @@ import MainButton from "../components/MainButton.astro";
 const title = "Future Experience Lab";
 const description =
   "Future Experience Lab är en experimentverkstad för att provköra framtiden. Och skapa den.";
-
-const buttontexts = ["Läs mer", "Kontakta oss"];
 
 const images = [
   "/src/images/48h.jpg",
@@ -38,9 +36,7 @@ const images = [
 >
   <p>Main</p>
   <!-- <Slider client:visible {images} /> -->
-  <MainButton buttontext={buttontexts[0]} />
-  <MainButton buttontext={buttontexts[1]} />
-  <!-- <ContactUsButton /> -->
+  <ContactSection />
 </BaseLayout>
 
 <style>

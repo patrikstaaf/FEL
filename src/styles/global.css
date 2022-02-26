@@ -37,6 +37,8 @@ body {
   --body-regular: "Montserrat-Regular", sans-serif;
   --body-bold: "Montserrat-Bold", sans-serif;
   --heading: "ClashDisplay-SemiBold", sans-serif;
+  background-color: #fff;
+  font-family: var(--body-regular);
 }
 
 img,
