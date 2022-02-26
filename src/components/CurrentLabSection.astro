@@ -1,0 +1,191 @@
+---
+import MainButton from "../components/MainButton.astro";
+
+const buttontexts = "Läs mer";
+---
+
+<section title="aktuellt lab">
+  <div class="max-w-wrapper">
+    <div class="wall-img">
+      <img src="/src/images/current-lab-wall.webp" alt="" />
+    </div>
+    <div class="lab-img">
+      <img src="/src/images/current-lab-lab01.webp" alt="" />
+    </div>
+    <div class="eye-img">
+      <img src="/src/images/current-lab-eye.webp" alt="" />
+    </div>
+    <div class="dotted-circle-svg">
+      <svg
+        width="537"
+        height="537"
+        viewBox="0 0 537 537"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="268.5"
+          cy="268.5"
+          r="266.5"
+          stroke="#F82250"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-dasharray="20 20"></circle>
+      </svg>
+    </div>
+    <div class="empty-circle-svg">
+      <svg
+        width="421"
+        height="422"
+        viewBox="0 0 421 422"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="15"
+          y="15"
+          width="391"
+          height="392"
+          rx="195.5"
+          stroke="#DAF1F8"
+          stroke-width="30"></rect>
+      </svg>
+    </div>
+    <div class="full-circle-svg">
+      <svg
+        width="384"
+        height="384"
+        viewBox="0 0 384 384"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle opacity="0.12" cx="192" cy="192" r="192" fill="#6AC5E2"
+        ></circle>
+      </svg>
+    </div>
+    <div class="dotted-squared-svg">
+      <svg
+        width="143"
+        height="143"
+        viewBox="0 0 143 143"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="2"
+          y="2"
+          width="139"
+          height="139"
+          stroke="#F82250"
+          stroke-width="4"
+          stroke-dasharray="20 20"></rect>
+      </svg>
+    </div>
+    <div class="body-text">
+      <h2>Framtidskreatörerna</h2>
+      <p>
+        I LAB01: Framtidskreatörerna utforskar vi hur åtta av Göteborgs
+        utpräglade destinationsaktörer i samarbete med 34 kreativa
+        Yrgo-studerande tillsammans kan skapa framtidens hybridevent.
+      </p>
+      <MainButton buttontext={buttontexts} />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    position: relative;
+    width: 100%;
+    height: 1300px;
+  }
+
+  .max-w-wrapper {
+    max-width: 100rem;
+    margin: 0 auto;
+    position: relative;
+    height: 1300px;
+    padding: 0 60px;
+  }
+
+  .empty-circle-svg {
+    position: absolute;
+    bottom: -12%;
+    right: 15%;
+    z-index: -2;
+  }
+
+  .wall-img img {
+    position: absolute;
+    left: 60px;
+    bottom: 16%;
+    width: 450px;
+    height: 510px;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .eye-img img {
+    position: absolute;
+    right: 60px;
+    top: -5%;
+    width: 310px;
+    height: 510px;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .lab-img img {
+    position: absolute;
+    left: 50%;
+    top: 13%;
+    transform: translateX(-50%);
+    height: 520px;
+    width: 1090px;
+    object-fit: cover;
+  }
+
+  .dotted-circle-svg {
+    position: absolute;
+    top: -10%;
+    left: 19%;
+    z-index: -2;
+  }
+
+  .full-circle-svg {
+    position: absolute;
+    top: 5%;
+    right: 12%;
+    z-index: -2;
+  }
+
+  .dotted-squared-svg {
+    position: absolute;
+    bottom: 10%;
+    left: 31%;
+    z-index: 2;
+  }
+
+  .body-text {
+    position: absolute;
+    max-width: 550px;
+    bottom: 22%;
+    right: 17%;
+  }
+
+  .body-text h2 {
+    font-family: var(--heading);
+    color: #f82250;
+    font-size: 48px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    line-height: 45px;
+  }
+
+  .body-text p {
+    font-size: 20px;
+    padding-right: 10px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+</style>
