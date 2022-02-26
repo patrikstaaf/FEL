@@ -16,6 +16,27 @@
     url("/src/fonts/ClashDisplay-Semibold.woff") format("woff");
 }
 
+:root {
+  --body-regular: "Montserrat-Regular", sans-serif;
+  --body-bold: "Montserrat-Bold", sans-serif;
+  --heading: "ClashDisplay-SemiBold", sans-serif;
+  /* --light: #fff; */
+  /* --bg-color-dark: #111827; */
+  /* --dark: #282828; */
+  /* --font-color-dark: #fff; */
+  /* --foreground: var(--dark);
+  --background: var(--light); */
+}
+
+.darkmode {
+  /* --light: #fff; */
+  /* --bg-color-dark: #111827; */
+  /* --dark: #282828; */
+  /* --font-color-dark: #fff; */
+  /* --foreground: var(--light);
+  --background: var(--dark); */
+}
+
 *,
 *::before,
 *::after {
@@ -34,11 +55,24 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  --body-regular: "Montserrat-Regular", sans-serif;
-  --body-bold: "Montserrat-Bold", sans-serif;
-  --heading: "ClashDisplay-SemiBold", sans-serif;
+  /* background-color: var(--background); */
+  /* color: var(--foreground); */
+
   background-color: #fff;
   font-family: var(--body-regular);
+}
+
+body.darkmode {
+  background-color: #171717;
+  color: #fff;
+}
+
+body.darkmode .test {
+  color: #fff;
+}
+
+body.darkmode .test-bg {
+  background-color: #a2961b;
 }
 
 img,
@@ -73,13 +107,6 @@ h6 {
 }
 
 /* :root {
-  --body-regular: "Montserrat-Regular", sans-serif;
-  --body-bold: "Montserrat-Bold", sans-serif;
-  --heading: "ClashDisplay-SemiBold", sans-serif;
-} */
-
-/* 
-:root {
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 	font-size: 1rem;
 	--user-font-scale: 1rem - 16px;
@@ -94,11 +121,15 @@ body {
 	justify-content: center;
 	background: #f9fafb;
 	color: #111827;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background: #111827;
-		color: #fff;
-	}
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: #fff;
+  }
+
+  .darkmode {
+    color: #fff;
+  }
 } */
