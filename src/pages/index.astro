@@ -6,6 +6,7 @@ import LabsSection from "../components/LabsSection.astro";
 import CurrentLabSection from "../components/CurrentLabSection.astro";
 import CopySection from "../components/CopySection.astro";
 import IntroSection from "../components/IntroSection.astro";
+import HeroSection from "../components/HeroSection.astro";
 
 // You can import components from any supported Framework here!
 
@@ -17,17 +18,6 @@ const title = "Future Experience Lab";
 const description =
   "Future Experience Lab är en experimentverkstad för att provköra framtiden. Och skapa den.";
 
-// const images = [
-//   "/src/images/48h.jpg",
-//   "/src/images/akaden.jpg",
-//   "/src/images/alfonz.jpg",
-//   "/src/images/frihamn.jpg",
-//   "/src/images/inner.jpg",
-//   "/src/images/silvia.jpg",
-//   "/src/images/tjol.jpg",
-//   "/src/images/westp.jpg",
-// ];
-
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -37,7 +27,7 @@ const description =
   {description}
   canonicalURL={Astro.request.canonicalURL.href}
 >
-  <!-- <Slider client:visible {images} /> -->
+  <HeroSection />
   <IntroSection />
   <CopySection />
   <CurrentLabSection />
