@@ -10,14 +10,7 @@ import Logo from "../components/Logo.astro";
     <div class="logo-small">
       <Logo />
     </div>
-    <!-- <div class="logo-text">
-      <a href="/"
-        ><span class="logo-first">Future</span><span class="logo-second"
-          >Experience</span
-        ><span class="logo-third">Lab</span></a
-      >
-    </div> -->
-    <div>
+    <div class="hamburger-card">
       <ul id="menu" hidden>
         <li class="nav-link-home"><a href="#">Home</a></li>
         <li class="nav-link"><a href="#">LABS</a></li>
@@ -102,8 +95,11 @@ import Logo from "../components/Logo.astro";
       </ul>
     </div>
     <div class="menu">
-      <button aria-expanded="false" aria-controls="menu"
-        ><svg
+      <button aria-expanded="false" aria-controls="menu">
+        <span class="hamburger-1"></span>
+        <span class="hamburger-2"></span>
+        <span class="hamburger-3"></span>
+        <!-- <svg
           width="27"
           height="16"
           viewBox="0 0 16 16"
@@ -116,7 +112,7 @@ import Logo from "../components/Logo.astro";
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"></path>
-        </svg>
+        </svg> -->
       </button>
     </div>
   </div>
@@ -194,6 +190,43 @@ import Logo from "../components/Logo.astro";
     font-family: var(--body-bold);
   }
 
+  .hamburger-1 {
+    display: block;
+    width: 10px;
+    height: 8px;
+    background-color: #f82250;
+    margin: 4px;
+    margin-right: 0px;
+  }
+
+  .hamburger-2 {
+    display: block;
+    width: 10px;
+    height: 8px;
+    background-color: #f7e733;
+    margin: 4px;
+    margin-right: 0px;
+  }
+
+  .hamburger-3 {
+    display: block;
+    width: 10px;
+    height: 8px;
+    background-color: #6ac5e2;
+    margin: 4px;
+    margin-right: 0px;
+  }
+
+  .hamburger-card ul {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    top: 62px;
+    z-index: 3;
+    background-color: black;
+  }
+
   .logo-medium {
     display: none;
   }
@@ -211,6 +244,9 @@ import Logo from "../components/Logo.astro";
   .menu button {
     background: none;
     border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    padding-right: 0px;
     /* padding-top: 10px; */
   }
 
