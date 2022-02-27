@@ -1,40 +1,25 @@
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url("/src/fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("/src/fonts/Montserrat-Regular.woff") format("woff");
+  src: url("/public/fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("/public/fonts/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Montserrat-Bold";
-  src: url("/src/fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("/src/fonts/Montserrat-Bold.woff") format("woff");
+  src: url("/public/fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("/public/fonts/Montserrat-Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "ClashDisplay-SemiBold";
-  src: url("/src/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
-    url("/src/fonts/ClashDisplay-Semibold.woff") format("woff");
+  src: url("/public/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("/public/fonts/ClashDisplay-Semibold.woff") format("woff");
 }
 
 :root {
   --body-regular: "Montserrat-Regular", sans-serif;
   --body-bold: "Montserrat-Bold", sans-serif;
   --heading: "ClashDisplay-SemiBold", sans-serif;
-  /* --light: #fff; */
-  /* --bg-color-dark: #111827; */
-  /* --dark: #282828; */
-  /* --font-color-dark: #fff; */
-  /* --foreground: var(--dark);
-  --background: var(--light); */
-}
-
-.darkmode {
-  /* --light: #fff; */
-  /* --bg-color-dark: #111827; */
-  /* --dark: #282828; */
-  /* --font-color-dark: #fff; */
-  /* --foreground: var(--light);
-  --background: var(--dark); */
 }
 
 *,
@@ -55,9 +40,6 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  /* background-color: var(--background); */
-  /* color: var(--foreground); */
-
   background-color: #fff;
   font-family: var(--body-regular);
 }
@@ -129,7 +111,3 @@ body {
     color: #fff;
   }
 
-  .darkmode {
-    color: #fff;
-  }
-} */
