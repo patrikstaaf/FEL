@@ -120,6 +120,17 @@ h6 {
   text-align: left;
 }
 
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+a::selection,
+span::selection {
+  color: #000;
+  background: #f7e733;
+}
+
 /* :root {
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 	font-size: 1rem;
