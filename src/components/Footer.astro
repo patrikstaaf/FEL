@@ -1,5 +1,7 @@
 ---
 import Logo from "../components/Logo.astro";
+
+const date = new Date().getFullYear();
 ---
 
 <footer>
@@ -25,7 +27,7 @@ import Logo from "../components/Logo.astro";
         <p>Kontakt</p>
       </div>
     </div>
-    <p class="copyright">&copy Future Experience Lab 2022</p>
+    <p class="copyright">&copy Future Experience Lab {date}</p>
   </div>
 </footer>
 
