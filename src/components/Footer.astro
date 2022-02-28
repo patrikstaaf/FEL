@@ -6,6 +6,9 @@ const date = new Date().getFullYear();
 
 <footer>
   <div class="content-wrapper">
+  <div class="logo-wrapper logo-medium">
+        <Logo />
+      </div>
     <h2>
       <span>Tillsammans provkör vi</span><span>framtiden, och skapar den</span>
     </h2>
@@ -13,18 +16,22 @@ const date = new Date().getFullYear();
       <div class="logo-wrapper logo-xl">
         <Logo />
       </div>
-      <div class="flex-col">
+      <div class="contact">
         <h4>KONTAKT</h4>
-        <p>fel@futureexpierencelab.com</p>
-        <p>070-384 96 00</p>
+        <ul>
+        <li><a href="mailto:fel@futureexpierencelab.com"><p>fel@futureexpierencelab.com</p></a></li>
+        <li><p>070-384 96 00</p></li>
+        </ul>
       </div>
-      <div>
+      <div class="pages">
         <h4>SIDOR</h4>
-        <p>Hem</p>
-        <p>LABS</p>
-        <p>Partners</p>
-        <p>Om oss</p>
-        <p>Kontakt</p>
+      <ul>
+      <li class="nav-link"><a href="#">Hem</a></li>
+      <li class="nav-link"><a href="#">LABS</a></li>
+      <li class="nav-link"><a href="#">Partners</a></li>
+      <li class="nav-link"><a href="#">Om oss</a></li>
+      <li class="nav-link"><a href="#">Kontakt</a></li>
+      </ul>
       </div>
     </div>
     <p class="copyright">&copy Future Experience Lab {date}</p>
@@ -37,13 +44,32 @@ const date = new Date().getFullYear();
     background-color: #080808;
     width: 100%;
   }
-
-  .content-wrapper {
-    max-width: 100rem;
-    margin: 0 auto;
+  
+ h2 {
+    font-family: var(--heading);
+    font-size: 24px;
+    line-height: 22px;
+    color: #fff;
+    padding-top: 32px;
+    padding-left: 16px;
   }
 
-  h2 {
+    h2 span {
+    display: block;
+  }
+
+  .logo-xl{
+    display: none;
+  }
+  
+  .logo-medium{
+    display: block;
+    padding-top: 188px;
+    padding-left: 16px;
+  }
+
+  @media screen and (min-width: 1000px) {
+     h2 {
     font-family: var(--heading);
     font-size: 48px;
     line-height: 45px;
@@ -51,59 +77,17 @@ const date = new Date().getFullYear();
     padding-top: 188px;
     padding-left: 175px;
   }
-
-  h3 {
-    font-family: var(--heading);
-    font-size: 64px;
-    line-height: 62px;
-    color: #fff;
-  }
-
-  h4 {
-    color: #fff;
-    font-family: var(--body-bold);
-    font-size: 20px;
-    line-height: 30px;
-    padding-bottom: 15px;
-  }
-
-  p {
-    color: #fff;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  h2 span {
+   .logo-xl{
     display: block;
-  }
+  } 
 
-  .logo-wrapper {
-    flex-grow: 2;
+   .logo-medium{
+    display: none;
   }
-
-  .flex-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: end;
-    padding: 64px 175px;
-  }
-
-  .flex-col {
-    padding-right: 100px;
-    padding-left: 30px;
-  }
-
-  .copyright {
-    font-size: 20px;
-    text-align: center;
-    padding-bottom: 32px;
-    color: #fff;
-  }
-
-  @media screen and (max-width: 1200px) {
-    h2 {
+    /* h2 {
       padding-left: 60px;
     }
+    
 
     .flex-wrapper {
       padding: 64px 60px;
@@ -111,6 +95,6 @@ const date = new Date().getFullYear();
 
     .flex-col {
       padding-right: 40px;
-    }
+    } */
   }
 </style>
