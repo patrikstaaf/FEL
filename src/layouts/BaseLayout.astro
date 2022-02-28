@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Nav from "../components/Nav.astro";
+import NavDesktop from "../components/NavDesktop.astro";
+import NavMobile from "../components/NavMobile.astro";
 import Footer from "../components/Footer.astro";
 
 const { title, description, canonicalURL } = Astro.props;
@@ -11,7 +12,12 @@ const { title, description, canonicalURL } = Astro.props;
     <BaseHead {title} {description} {canonicalURL} />
   </head>
   <body>
-    <Nav />
+    <div class="desktop-nav">
+      <NavDesktop />
+    </div>
+    <div class="mobile-nav">
+      <NavMobile />
+    </div>
     <main>
       <slot />
     </main>
@@ -20,5 +26,21 @@ const { title, description, canonicalURL } = Astro.props;
 </html>
 
 <style>
+  .desktop-nav {
+    display: none;
+  }
 
+  .mobile-nav {
+    display: block;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .desktop-nav {
+      display: block;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+  }
 </style>

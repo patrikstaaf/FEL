@@ -1,0 +1,274 @@
+---
+import Logo from "../components/Logo.astro";
+---
+
+<nav class="navigation">
+  <div class="max-w-wrapper">
+    <div class="logo-small">
+      <Logo />
+    </div>
+    <div class="hamburger-card" hidden>
+      <div class="mobile-bg">
+        <img src="/src/images/Frame.png" alt="" />
+        <div class="logo-large">
+          <Logo />
+        </div>
+      </div>
+      <div class="mobile-info-container">
+        <ul>
+          <li class="nav-link-home"><a href="#">Hem</a></li>
+          <li class="nav-link"><a href="#">LABS</a></li>
+          <li class="nav-link"><a href="#">Partners</a></li>
+          <li class="nav-link"><a href="#">Om oss</a></li>
+          <li class="nav-link"><a href="#">Kontakt</a></li>
+          <!-- <li class="nav-link-dm">
+            <button class="dark-mode-toggle" aria-label="toggle scheme color"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-moon"
+                ><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path></svg
+              ></button
+            >
+          </li> -->
+        </ul>
+        <div class="user-login-mobile">
+          <a class="member" href="">Bli medlem</a>
+          <a class="login" href="">Logga in</a>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <button aria-expanded="false" aria-controls="menu">
+        <span class="hamburger-1"></span>
+        <span class="hamburger-2"></span>
+        <span class="hamburger-3"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggleMenu = document.querySelector(".menu button");
+  const menu = document.querySelector(".hamburger-card");
+  // const darkModeToggle = document.querySelector(".dark-mode-toggle");
+  // let darkMode = localStorage.getItem("darkMode");
+
+  // const enableDarkMode = () => {
+  //   document.body.classList.add("darkmode");
+  //   localStorage.setItem("darkMode", "enabled");
+  //   document.querySelector(
+  //     ".dark-mode-toggle"
+  //   ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+  // };
+
+  // const disableDarkMode = () => {
+  //   document.body.classList.remove("darkmode");
+  //   localStorage.setItem("darkMode", null);
+  //   document.querySelector(
+  //     ".dark-mode-toggle"
+  //   ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+  // };
+
+  // if (darkMode === "enabled") {
+  //   enableDarkMode();
+  // }
+
+  // darkModeToggle.addEventListener("click", () => {
+  //   darkMode = localStorage.getItem("darkMode");
+
+  //   if (darkMode !== "enabled") {
+  //     enableDarkMode();
+  //   } else {
+  //     disableDarkMode();
+  //   }
+  // });
+
+  toggleMenu.addEventListener("click", function () {
+    const open = JSON.parse(toggleMenu.getAttribute("aria-expanded"));
+    toggleMenu.setAttribute("aria-expanded", !open);
+    menu.hidden = !menu.hidden;
+
+    if (!menu.hidden) {
+      menu.querySelector("a").focus();
+    }
+  });
+</script>
+
+<style>
+  .navigation {
+    background-color: black;
+    width: 100%;
+    /* display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-family: var(--body-bold); */
+    /* margin: 0 auto; */
+    height: 62px;
+  }
+
+  ul a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+  }
+
+  .max-w-wrapper {
+    /* width: 100%; */
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    font-family: var(--body-bold);
+  }
+
+  .hamburger-1 {
+    display: block;
+    width: 10px;
+    height: 8px;
+    background-color: #f82250;
+    margin: 4px;
+    margin-right: 0px;
+  }
+
+  .hamburger-2 {
+    display: block;
+    width: 10px;
+    height: 8px;
+    background-color: #f7e733;
+    margin: 4px;
+    margin-right: 0px;
+  }
+
+  .hamburger-3 {
+    display: block;
+    width: 10px;
+    height: 8px;
+    background-color: #6ac5e2;
+    margin: 4px;
+    margin-right: 0px;
+  }
+
+  /* .desktop-card {
+    display: none;
+  } */
+
+  .hamburger-card {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    top: 62px;
+    z-index: 3;
+    background-color: black;
+  }
+
+  .mobile-bg {
+    position: relative;
+    height: 320px;
+  }
+
+  .mobile-bg img {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .logo-medium {
+    display: none;
+  }
+
+  .logo-small {
+    display: block;
+  }
+
+  .logo-large {
+    display: block;
+    position: absolute;
+    left: 24px;
+    bottom: 8px;
+    z-index: 3;
+  }
+
+  .nav-login {
+    display: none;
+  }
+
+  .mobile-info-container {
+    height: calc(100% - 320px);
+    position: relative;
+  }
+  .user-login-mobile {
+    position: absolute;
+    bottom: 24px;
+    right: 16px;
+    font-size: 20px;
+  }
+
+  .member {
+    text-decoration: none;
+    color: #f82250;
+    padding: 8px 16px;
+    padding-right: 32px;
+  }
+
+  .login {
+    text-decoration: none;
+    background-color: #f82250;
+    padding: 8px 16px;
+    color: #fff;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    padding-right: 0px;
+    /* padding-top: 10px; */
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 30px 0px 0px 0px;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  nav li {
+    margin: 1em 0 0 1em;
+  }
+
+  li.nav-link-home {
+    display: block;
+  }
+
+  .nav-link-dm {
+    display: none;
+  }
+
+  /* @media screen and (min-width: 1000px) {
+    .navigation {
+      padding: 0 80px;
+    }
+  } */
+</style>
