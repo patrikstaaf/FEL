@@ -1,6 +1,6 @@
 ---
-import SliderItem from "../components/SliderItem.astro";
-import SliderProgressBar from "../components/SliderProgressBar.astro";
+import SliderItem from '../components/SliderItem.astro';
+import SliderProgressBar from '../components/SliderProgressBar.astro';
 
 const { images, labels } = Astro.props;
 ---
@@ -18,12 +18,12 @@ const { images, labels } = Astro.props;
       <SliderItem image={images[7]} label={labels[7]} />
     </div>
   </div>
-  <!-- <SliderProgressBar /> -->
+  <SliderProgressBar />
 </div>
 
 <script>
-  const slider = document.querySelector(".slider-inner");
-  const progressBar = document.querySelector(".prog-bar-inner");
+  const slider = document.querySelector('.slider-inner');
+  const progressBar = document.querySelector('.prog-bar-inner');
 
   let sliderGrabbed = false;
 
@@ -35,22 +35,22 @@ const { images, labels } = Astro.props;
     );
   }
 
-  slider.addEventListener("mousedown", () => {
+  slider.addEventListener('mousedown', () => {
     sliderGrabbed = true;
-    slider.style.cursor = "grabbing";
+    slider.style.cursor = 'grabbing';
   });
 
-  slider.addEventListener("mouseup", () => {
+  slider.addEventListener('mouseup', () => {
     sliderGrabbed = false;
-    slider.style.cursor = "grab";
+    slider.style.cursor = 'grab';
   });
 
-  slider.addEventListener("mouseleave", () => {
+  slider.addEventListener('mouseleave', () => {
     sliderGrabbed = false;
-    slider.style.cursor = "grab";
+    slider.style.cursor = 'grab';
   });
 
-  slider.addEventListener("mousemove", (e) => {
+  slider.addEventListener('mousemove', (e) => {
     if (sliderGrabbed) {
       slider.parentElement.scrollLeft -= e.movementX;
     }
@@ -61,7 +61,7 @@ const { images, labels } = Astro.props;
   //     slider.parentElement.scrollLeft += e.deltaY;
   //   });
 
-  slider.parentElement.addEventListener("scroll", (e) => {
+  slider.parentElement.addEventListener('scroll', (e) => {
     console.log(getScrollPercentage());
     progressBar.style.width = `${getScrollPercentage()}%`;
   });
