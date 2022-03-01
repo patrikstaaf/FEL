@@ -27,6 +27,42 @@ const buttontexts = 'Läs mer';
     <div class="tram-img">
       <img src="/src/images/intro-tram.webp" alt="" />
     </div>
+    <div class="mobile-dotted-left">
+      <svg
+        width="230"
+        height="230"
+        viewBox="0 0 230 230"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="115"
+          cy="115"
+          r="113"
+          stroke="#F82250"
+          stroke-width="2.63351"
+          stroke-linecap="round"
+          stroke-dasharray="13.17 13.17"></circle>
+      </svg>
+    </div>
+    <div class="mobile-dotted-right">
+      <svg
+        width="230"
+        height="230"
+        viewBox="0 0 230 230"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="115"
+          cy="115"
+          r="113"
+          stroke="#F82250"
+          stroke-width="2.63351"
+          stroke-linecap="round"
+          stroke-dasharray="13.17 13.17"></circle>
+      </svg>
+    </div>
     <div class="dotted-left-svg">
       <svg
         width="388"
@@ -1267,38 +1303,47 @@ const buttontexts = 'Läs mer';
 
   .tram-img img {
     position: absolute;
-    left: 20%;
-    top: 1%;
-    width: 310px;
-    height: 510px;
+    left: 12%;
+    top: 9%;
+    width: 216px;
+    height: 355px;
     object-fit: cover;
     z-index: 1;
+    transform: scaleX(-1);
   }
 
   .dotted-top-svg {
-    position: absolute;
-    top: -6%;
-    left: 22%;
-    z-index: -2;
+    display: none;
   }
 
   .dotted-left-svg {
+    display: none;
+  }
+
+  .mobile-dotted-left {
     position: absolute;
-    top: 21%;
-    left: 10%;
+    top: 22%;
+    left: 5%;
+    z-index: -2;
+  }
+  .mobile-dotted-right {
+    position: absolute;
+    top: 6%;
+    right: 4%;
     z-index: -2;
   }
 
   .empty-circle-svg {
-    position: absolute;
+    /* position: absolute;
     top: 17%;
     right: 20%;
-    z-index: -2;
+    z-index: -2; */
+    display: none;
   }
 
   .postit-img img {
     position: absolute;
-    right: 14%;
+    right: 0%;
     bottom: 31%;
     width: 865px;
     height: 510px;
@@ -1309,8 +1354,8 @@ const buttontexts = 'Läs mer';
   .red-rect {
     position: absolute;
     height: 179px;
-    width: 360px;
-    right: 60px;
+    width: 200px;
+    right: 0%;
     top: 38%;
     background-color: #f82250;
     mix-blend-mode: multiply;
@@ -1319,54 +1364,58 @@ const buttontexts = 'Läs mer';
   .header {
     z-index: 3;
     position: absolute;
-    left: 12%;
-    bottom: 38%;
+    left: 4%;
+    bottom: 25%;
     max-width: 570px;
   }
 
   .header h2 {
     color: #000;
     font-family: var(--heading);
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 24px;
+    line-height: 22px;
   }
 
   .style-span-small {
     position: absolute;
-    height: 180px;
-    width: 32px;
+
+    width: 16px;
+    height: 144px;
+
     background-color: #f7e733;
-    left: 8%;
-    bottom: 35%;
+    left: 0%;
+    bottom: 23%;
   }
 
   .style-span-large {
     position: absolute;
-    height: 180px;
-    width: 390px;
+
     background-color: #f7e733;
-    left: 24%;
-    bottom: 35%;
+    left: 17%;
+    bottom: 23%;
+    width: 100%;
+    height: 144px;
   }
 
   .rect-svg {
-    position: absolute;
+    /* position: absolute;
     bottom: 21%;
     right: 18%;
-    z-index: -2;
+    z-index: -2; */
+    display: none;
   }
 
   .body-text {
     position: absolute;
     max-width: 550px;
-    bottom: 14%;
-    left: 25%;
+    bottom: 4%;
+    left: 16px;
   }
 
   .body-text p {
-    font-size: 20px;
+    font-size: 16px;
     padding-right: 10px;
-    line-height: 30px;
+    line-height: 24px;
     padding-bottom: 20px;
   }
 
@@ -1376,5 +1425,141 @@ const buttontexts = 'Läs mer';
 
   .test-bg {
     background-color: a2961b;
+  }
+
+  @media screen and (min-width: 430px) {
+    .body-text p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .header {
+      bottom: 22%;
+    }
+
+    .postit-img img {
+      right: 14%;
+    }
+
+    .red-rect {
+      right: 60px;
+      width: 360px;
+    }
+
+    .style-span-large {
+      width: 269px;
+      bottom: 20%;
+    }
+
+    .style-span-small {
+      bottom: 20%;
+    }
+
+    .mobile-dotted-right {
+      display: none;
+    }
+
+    .dotted-top-svg {
+      display: block;
+      position: absolute;
+      top: -6%;
+      left: 22%;
+      z-index: -2;
+    }
+  }
+
+  @media screen and (min-width: 650px) {
+    .header h2 {
+      font-size: 32px;
+      line-height: 35px;
+    }
+
+    .header {
+      left: 12%;
+    }
+
+    .style-span-large {
+      height: 180px;
+      width: 390px;
+      left: 24%;
+    }
+
+    .style-span-small {
+      height: 180px;
+      width: 32px;
+      left: 8%;
+    }
+
+    .body-text {
+      left: 10%;
+    }
+
+    .mobile-dotted-left {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .body-text {
+      left: 25%;
+    }
+
+    .empty-circle-svg {
+      display: block;
+      position: absolute;
+      top: 17%;
+      right: 20%;
+      z-index: -2;
+    }
+
+    .tram-img img {
+      width: 310px;
+      height: 510px;
+    }
+
+    .dotted-left-svg {
+      display: block;
+      position: absolute;
+      top: 21%;
+      left: 10%;
+      z-index: -2;
+    }
+
+    .tram-img img {
+      left: 6%;
+      top: 2%;
+    }
+  }
+
+  @media screen and (min-width: 1150px) {
+    .tram-img img {
+      left: 18%;
+    }
+  }
+
+  @media screen and (min-width: 1350px) {
+    .rect-svg {
+      display: block;
+      position: absolute;
+      bottom: 21%;
+      right: 18%;
+      z-index: -2;
+    }
+
+    .body-text {
+      bottom: 14%;
+    }
+
+    .style-span-small {
+      bottom: 35%;
+    }
+
+    .style-span-large {
+      bottom: 35%;
+    }
+
+    .header {
+      bottom: 38%;
+    }
   }
 </style>
