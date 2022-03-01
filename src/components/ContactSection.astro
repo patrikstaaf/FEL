@@ -1,13 +1,13 @@
 ---
-import MainButton from '../components/MainButton.astro';
+import MainButton from "../components/MainButton.astro";
 
-const buttontexts = 'Kontakta oss';
+const buttontexts = "Kontakta oss";
 ---
 
 <section title="kontakta oss">
   <div class="svg-wrapper">
     <svg
-      width="261"
+      width="421"
       height="422"
       viewBox="0 0 261 422"
       fill="none"
@@ -28,24 +28,25 @@ const buttontexts = 'Kontakta oss';
       <img src="/src/images/contact-section.png" alt="" />
     </div>
     <span class="style-span-small test-bg"></span>
-    <div class="header">
+    <div class="content-wrapper">
       <h2 class="test">
         <span class="text-span">Provkör din</span><span class="text-span"
           >verksamhets framtid</span
         >
       </h2>
-    </div>
-    <span class="style-span-large test-bg"></span>
-    <div class="body-text">
-      <h3>
-        Behöver du också ett Future Experience Lab för din verksamhets framtid?
-        Kontakta oss!
-      </h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus ultrices
-        pellentesque pellentesque ultricies lacus, dui elementum eleifend.
-      </p>
-      <MainButton buttontext={buttontexts} />
+      <span class="style-span-large test-bg"></span>
+      <div class="body-text">
+        <h3>
+          Behöver du också ett Future Experience Lab för din verksamhets
+          framtid? Kontakta oss!
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus
+          ultrices pellentesque pellentesque ultricies lacus, dui elementum
+          eleifend.
+        </p>
+        <MainButton buttontext={buttontexts} />
+      </div>
     </div>
   </div>
 </section>
@@ -54,97 +55,127 @@ const buttontexts = 'Kontakta oss';
   section {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 938px;
   }
 
-  .section-wrapper {
-    max-width: 90rem;
-    margin: 0 auto;
-    position: relative;
-    height: 800px;
-  }
-
-  .image-wrapper {
-    padding-left: 64px;
+  h2 {
     position: absolute;
-    bottom: -9%;
-  }
-
-  .image-wrapper img {
-    width: 533px;
-    height: 718px;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  .svg-wrapper {
-    position: absolute;
-    top: 20%;
-    right: 0;
-  }
-
-  .header {
-    z-index: 3;
-    position: absolute;
-    left: 22.5%;
-    top: 28%;
-  }
-
-  .header h2 {
-    /* color: #000; */
     font-family: var(--heading);
-    font-size: 64px;
-    line-height: 62px;
+    font-size: 32px;
+    line-height: 29px;
+    z-index: 5;
   }
 
+  h3 {
+    font-family: var(--body-bold);
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 110px;
+  }
+
+  p {
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 16px 0 32px 0;
+  }
   .text-span {
     display: block;
   }
 
+  .content-wrapper {
+    padding-right: 16px;
+    padding-left: 24px;
+  }
+  .svg-wrapper {
+    display: none;
+  }
+
+  .img-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 510px;
+  }
+
   .style-span-small {
     position: absolute;
-    height: 180px;
-    width: 32px;
+    height: 110px;
+    width: 16px;
     background-color: #f7e733;
-    left: 19%;
-    top: 25%;
+    left: 0;
   }
 
   .style-span-large {
     position: absolute;
-    height: 180px;
-    width: 358px;
+    height: 110px;
+    width: 269px;
     background-color: #f7e733;
-    left: 38%;
-    top: 25%;
+    right: 0;
+    bottom: 200px;
   }
 
-  .body-text {
-    position: absolute;
-    max-width: 500px;
-    bottom: 6%;
-    right: 13%;
-  }
+  @media screen and (min-width: 850px) {
+    .image-wrapper {
+      padding-left: 64px;
+      position: absolute;
+      bottom: -9%;
+    }
+    .image-wrapper img {
+      width: 533px;
+      height: 718px;
+      object-fit: cover;
+      z-index: 1;
+    }
 
-  .body-text h3 {
-    font-family: var(--body-bold);
-    font-size: 20px;
-    padding-bottom: 20px;
-    padding-right: 10px;
-    line-height: 30px;
-  }
+    .svg-wrapper {
+      position: absolute;
+      top: 30%;
+      right: 0;
+      display: block;
+    }
 
-  .body-text p {
-    padding-right: 10px;
-    line-height: 30px;
-    padding-bottom: 20px;
-  }
+    h2 {
+      font-size: 64px;
+      line-height: 62px;
+      z-index: 3;
+      position: absolute;
+      left: 22.5%;
+      top: 43%;
+    }
+    h3 {
+      font-size: 20px;
+      padding-bottom: 20px;
+      padding-right: 10px;
+      line-height: 30px;
+    }
 
-  .test {
-    color: #000;
-  }
+    p {
+      padding-right: 10px;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
 
-  .test-bg {
-    background-color: a2961b;
+    .style-span-small {
+      position: absolute;
+      height: 180px;
+      width: 32px;
+      background-color: #f7e733;
+      left: 19%;
+      top: 40%;
+    }
+    .style-span-large {
+      position: absolute;
+      height: 180px;
+      width: 358px;
+      background-color: #f7e733;
+      left: 38%;
+      top: 40%;
+    }
+    .body-text {
+      position: absolute;
+      max-width: 500px;
+      bottom: 6%;
+      right: 18%;
+    }
   }
 </style>
