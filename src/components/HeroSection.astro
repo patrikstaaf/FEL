@@ -254,32 +254,69 @@
 
   .hero-text {
     position: absolute;
-    left: 60px;
-    top: 19%;
+    left: 16px;
+    top: 55%;
+    z-index: 1;
   }
 
   .hero-text h1 {
     font-family: var(--heading);
     color: #fff;
-    font-size: 64px;
-    line-height: 62px;
-    max-width: 725px;
+    font-size: 32px;
+    line-height: 29px;
+    max-width: 325px;
   }
 
   .red-rect {
     position: absolute;
-    height: 179px;
-    width: 360px;
-    left: 60px;
-    bottom: -16%;
+
+    height: 107px;
+    width: 180px;
+    left: 0;
+    bottom: 26%;
+
     background-color: #f82250;
     mix-blend-mode: multiply;
   }
 
   .rect-svg {
     position: absolute;
-    bottom: 3%;
-    right: 6%;
+
+    bottom: -20%;
+    right: -20%;
     z-index: 2;
+  }
+
+  @media screen and (min-width: 450px) {
+  }
+
+  @media screen and (min-width: 600px) {
+    .hero-text {
+      top: 19%;
+      left: 60px;
+    }
+    .hero-text h1 {
+      font-size: 64px;
+      line-height: 62px;
+      max-width: 725px;
+    }
+
+    .red-rect {
+      height: 179px;
+      width: 360px;
+      left: 60px;
+      bottom: -16%;
+    }
+
+    .rect-svg {
+      bottom: 3%;
+      right: 6%;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+  }
+
+  @media screen and (min-width: 1300px) {
   }
 </style>
