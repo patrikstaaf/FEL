@@ -15,6 +15,27 @@ const buttontexts = 'Läs mer';
     <div class="eye-img">
       <img src="/src/images/current-lab-eye.webp" alt="" />
     </div>
+    <div class="mobile-tram">
+      <img src="/src/images/intro-tram.webp" alt="" />
+    </div>
+    <div class="mobile-svg">
+      <svg
+        width="160"
+        height="288"
+        viewBox="0 0 160 288"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="16"
+          cy="144"
+          r="142"
+          stroke="#F82250"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-dasharray="20 20"></circle>
+      </svg>
+    </div>
     <div class="dotted-circle-svg">
       <svg
         width="537"
@@ -105,87 +126,202 @@ const buttontexts = 'Läs mer';
     margin: 0 auto;
     position: relative;
     height: 1300px;
-    padding: 0 60px;
+    padding: 0 20px;
+  }
+
+  .mobile-tram {
+    position: absolute;
+    top: -5%;
+    left: 30%;
+  }
+
+  .mobile-tram img {
+    height: 355px;
+    width: 216px;
+    object-fit: cover;
   }
 
   .empty-circle-svg {
-    position: absolute;
+    /* position: absolute;
     bottom: -12%;
     right: 15%;
-    z-index: -2;
+    z-index: -2; */
+    display: none;
   }
 
   .wall-img img {
-    position: absolute;
+    /* position: absolute;
     left: 60px;
     bottom: 16%;
     width: 450px;
     height: 510px;
     object-fit: cover;
-    z-index: 1;
+    z-index: 1; */
+    display: none;
   }
 
   .eye-img img {
-    position: absolute;
+    /* position: absolute;
     right: 60px;
     top: -5%;
     width: 310px;
     height: 510px;
     object-fit: cover;
-    z-index: 1;
+    z-index: 1; */
+    display: none;
   }
 
   .lab-img img {
     position: absolute;
     left: 50%;
     top: 13%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     height: 520px;
     width: 1090px;
     object-fit: cover;
+    transform: scaleX(-1) translateX(50%);
   }
 
   .dotted-circle-svg {
-    position: absolute;
+    /* position: absolute;
     top: -10%;
     left: 19%;
-    z-index: -2;
+    z-index: -2; */
+    display: none;
   }
 
   .full-circle-svg {
-    position: absolute;
+    /* position: absolute;
     top: 5%;
     right: 12%;
-    z-index: -2;
+    z-index: -2; */
+    display: none;
   }
 
   .dotted-squared-svg {
-    position: absolute;
+    /* position: absolute;
     bottom: 10%;
     left: 31%;
-    z-index: 2;
+    z-index: 2; */
+    display: none;
+  }
+
+  .mobile-svg {
+    position: absolute;
+    top: -12%;
+    left: 0%;
+    z-index: -2;
   }
 
   .body-text {
     position: absolute;
     max-width: 550px;
     bottom: 22%;
-    right: 17%;
+    /* right: 17%; */
   }
 
   .body-text h2 {
     font-family: var(--heading);
     color: #f82250;
-    font-size: 48px;
+    font-size: 28px;
     padding-bottom: 20px;
     padding-right: 10px;
     line-height: 45px;
   }
 
   .body-text p {
-    font-size: 20px;
+    font-size: 16px;
     padding-right: 10px;
     line-height: 30px;
     padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 450px) {
+    .mobile-tram img {
+      display: none;
+    }
+
+    .dotted-circle-svg {
+      display: block;
+      position: absolute;
+      top: -10%;
+      left: 19%;
+      z-index: -2;
+    }
+
+    .full-circle-svg {
+      display: block;
+      position: absolute;
+      top: 5%;
+      right: 12%;
+      z-index: -2;
+    }
+
+    .mobile-svg {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .max-wrapper {
+      padding: 0 60px;
+    }
+
+    .body-text {
+      right: 17%;
+    }
+
+    .body-text h2 {
+      font-size: 48px;
+    }
+
+    .body-text p {
+      font-size: 20px;
+    }
+
+    .lab-image {
+      /* transform: scaleX(1); */
+      transform: scaleX(1) translateX(50%);
+    }
+
+    .dotted-squared-svg {
+      display: block;
+      position: absolute;
+      bottom: 10%;
+      left: 31%;
+      z-index: 2;
+    }
+
+    .empty-circle-svg {
+      display: block;
+      position: absolute;
+      bottom: -12%;
+      right: 15%;
+      z-index: -2;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .wall-img img {
+      display: block;
+      position: absolute;
+      left: 60px;
+      bottom: 16%;
+      width: 450px;
+      height: 510px;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .eye-img img {
+      display: block;
+      position: absolute;
+      right: 60px;
+      top: -5%;
+      width: 310px;
+      height: 510px;
+      object-fit: cover;
+      z-index: 1;
+    }
   }
 </style>
