@@ -106,7 +106,7 @@ const date = new Date().getFullYear();
   }
 
   @media screen and (min-width: 1000px) {
-     h2 {
+    h2 {
     font-family: var(--heading);
     font-size: 48px;
     line-height: 45px;
@@ -116,22 +116,50 @@ const date = new Date().getFullYear();
   }
    .logo-xl{
     display: block;
+    padding-left: 175px;
+    padding-top: 76px; 
   } 
 
    .logo-medium{
     display: none;
   }
-    /* h2 {
-      padding-left: 60px;
-    }
+
+    ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 8px;
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   padding-top: 143px; 
+  }
+
+  .pages{
+    display: flex;
+    flex-direction: column;
+    padding-right: 176px;
+  }
+  .copyright{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+  } 
     
 
-    .flex-wrapper {
-      padding: 64px 60px;
+  .flex-wrapper {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
     }
-
-    .flex-col {
-      padding-right: 40px;
-    } */
+    
   }
 </style>
