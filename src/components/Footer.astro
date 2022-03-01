@@ -1,5 +1,5 @@
 ---
-import Logo from '../components/Logo.astro';
+import Logo from "../components/Logo.astro";
 
 const date = new Date().getFullYear();
 ---
@@ -21,7 +21,8 @@ const date = new Date().getFullYear();
         <ul>
           <li>
             <a href="mailto:fel@futureexpierencelab.com"
-              ><p>fel@futureexpierencelab.com</p></a>
+              ><p>fel@futureexpierencelab.com</p></a
+            >
           </li>
           <li><p>070-384 96 00</p></li>
         </ul>
@@ -46,7 +47,6 @@ const date = new Date().getFullYear();
     font-family: var(--body-regular);
     background-color: #080808;
     width: 100%;
-    padding-left: 16px;
   }
 
   h2 {
@@ -108,18 +108,18 @@ const date = new Date().getFullYear();
     padding: 32px 0px 64px 0px;
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 850px) {
     h2 {
       font-family: var(--heading);
       font-size: 48px;
       line-height: 45px;
       color: #fff;
       padding-top: 188px;
-      padding-left: 175px;
+      padding-left: 50px;
     }
     .logo-xl {
       display: block;
-      padding-left: 175px;
+      padding-left: 50px;
       padding-top: 76px;
     }
 
@@ -139,6 +139,10 @@ const date = new Date().getFullYear();
       font-size: 20px;
       padding-bottom: 8px;
     }
+
+    .nav-link {
+      padding-top: 8px;
+    }
     .contact {
       display: flex;
       flex-direction: column;
@@ -149,7 +153,7 @@ const date = new Date().getFullYear();
     .pages {
       display: flex;
       flex-direction: column;
-      padding-right: 176px;
+      padding-right: 50px;
     }
     .copyright {
       display: flex;
@@ -161,6 +165,18 @@ const date = new Date().getFullYear();
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .pages {
+      padding-right: 175px;
+    }
+    .logo-xl {
+      padding-left: 175px;
+    }
+    h2 {
+      padding-left: 175px;
     }
   }
 </style>
