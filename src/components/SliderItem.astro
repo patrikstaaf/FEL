@@ -16,7 +16,7 @@ const { image, label } = Astro.props;
 
 <style>
   .item {
-    width: 250px;
+    width: 215px;
     height: 98%;
     top: 1%;
     position: relative;
@@ -38,14 +38,28 @@ const { image, label } = Astro.props;
 
   .label-wrapper p {
     font-family: var(--heading);
-    font-size: 62px;
+    font-size: 28px;
     padding: 0 8px;
     color: #000;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 450px) {
     .item {
-      width: 483px;
+      width: 350px;
+    }
+
+    .label-wrapper p {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .item {
+      width: 550px;
+    }
+
+    .label-wrapper p {
+      font-size: 62px;
     }
   }
 </style>

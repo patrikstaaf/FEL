@@ -18,7 +18,7 @@ const { images, labels } = Astro.props;
       <SliderItem image={images[7]} label={labels[7]} />
     </div>
   </div>
-  <SliderProgressBar />
+  <!-- <SliderProgressBar /> -->
 </div>
 
 <script>
@@ -73,7 +73,7 @@ const { images, labels } = Astro.props;
     top: 35%;
     left: 5%;
     width: 95%;
-    /* height: 300px; */
+    height: 260px;
     cursor: grab;
   }
 
@@ -103,7 +103,17 @@ const { images, labels } = Astro.props;
     gap: 45px;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 450px) {
+    .slider-inner {
+      width: 4200px;
+    }
+
+    .slider-wrap {
+      height: 350px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
     .slider-inner {
       width: 4300px;
     }
