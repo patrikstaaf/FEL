@@ -1,14 +1,14 @@
 ---
-import Logo from "../components/Logo.astro";
+import Logo from '../components/Logo.astro';
 
 const date = new Date().getFullYear();
 ---
 
 <footer>
   <div class="content-wrapper">
-  <div class="logo-wrapper logo-medium">
-        <Logo />
-      </div>
+    <div class="logo-wrapper logo-medium">
+      <Logo />
+    </div>
     <h2>
       <span>Tillsammans provkör vi</span><span>framtiden, och skapar den</span>
     </h2>
@@ -19,19 +19,22 @@ const date = new Date().getFullYear();
       <div class="contact">
         <h4>KONTAKT</h4>
         <ul>
-        <li><a href="mailto:fel@futureexpierencelab.com"><p>fel@futureexpierencelab.com</p></a></li>
-        <li><p>070-384 96 00</p></li>
+          <li>
+            <a href="mailto:fel@futureexpierencelab.com"
+              ><p>fel@futureexpierencelab.com</p></a>
+          </li>
+          <li><p>070-384 96 00</p></li>
         </ul>
       </div>
       <div class="pages">
         <h4>SIDOR</h4>
-      <ul>
-      <li class="nav-link"><a href="#">Hem</a></li>
-      <li class="nav-link"><a href="#">LABS</a></li>
-      <li class="nav-link"><a href="#">Partners</a></li>
-      <li class="nav-link"><a href="#">Om oss</a></li>
-      <li class="nav-link"><a href="#">Kontakt</a></li>
-      </ul>
+        <ul>
+          <li class="nav-link"><a href="#">Hem</a></li>
+          <li class="nav-link"><a href="#">LABS</a></li>
+          <li class="nav-link"><a href="#">Partners</a></li>
+          <li class="nav-link"><a href="#">Om oss</a></li>
+          <li class="nav-link"><a href="#">Kontakt</a></li>
+        </ul>
       </div>
     </div>
     <p class="copyright">&copy Future Experience Lab {date}</p>
@@ -43,10 +46,10 @@ const date = new Date().getFullYear();
     font-family: var(--body-regular);
     background-color: #080808;
     width: 100%;
-     padding-left: 16px;
+    padding-left: 16px;
   }
-  
- h2 {
+
+  h2 {
     font-family: var(--heading);
     font-size: 24px;
     line-height: 22px;
@@ -55,7 +58,7 @@ const date = new Date().getFullYear();
   }
 
   h2 span {
-  display: block;
+    display: block;
   }
 
   h4 {
@@ -65,28 +68,28 @@ const date = new Date().getFullYear();
     line-height: 24px;
   }
 
-    p {
+  p {
     color: #fff;
     font-size: 16px;
     line-height: 24px;
   }
 
-  .logo-xl{
+  .logo-xl {
     display: none;
   }
-  
-  .logo-medium{
+
+  .logo-medium {
     display: block;
     padding-top: 188px;
   }
 
-  ul{
+  ul {
     padding: 0;
     list-style: none;
   }
 
-  .nav-link{
-  padding-top: 24px;
+  .nav-link {
+    padding-top: 24px;
   }
 
   li a {
@@ -94,72 +97,70 @@ const date = new Date().getFullYear();
     color: #fff;
     font-size: 16px;
   }
-.contact h4{
-  padding: 32px 0 24px 0;
-}
-  .pages{
+  .contact h4 {
+    padding: 32px 0 24px 0;
+  }
+  .pages {
     padding-top: 32px;
   }
 
-  .copyright{
+  .copyright {
     padding: 32px 0px 64px 0px;
   }
 
   @media screen and (min-width: 1000px) {
     h2 {
-    font-family: var(--heading);
-    font-size: 48px;
-    line-height: 45px;
-    color: #fff;
-    padding-top: 188px;
-    padding-left: 175px;
-  }
-   .logo-xl{
-    display: block;
-    padding-left: 175px;
-    padding-top: 76px; 
-  } 
+      font-family: var(--heading);
+      font-size: 48px;
+      line-height: 45px;
+      color: #fff;
+      padding-top: 188px;
+      padding-left: 175px;
+    }
+    .logo-xl {
+      display: block;
+      padding-left: 175px;
+      padding-top: 76px;
+    }
 
-   .logo-medium{
-    display: none;
-  }
+    .logo-medium {
+      display: none;
+    }
 
     ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-  }
-
-  li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    padding-bottom: 8px;
-  }
-  .contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-   padding-top: 143px; 
-  }
-
-  .pages{
-    display: flex;
-    flex-direction: column;
-    padding-right: 176px;
-  }
-  .copyright{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 32px;
-  } 
-    
-
-  .flex-wrapper {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
     }
-    
+
+    li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      padding-bottom: 8px;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-top: 143px;
+    }
+
+    .pages {
+      display: flex;
+      flex-direction: column;
+      padding-right: 176px;
+    }
+    .copyright {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 32px;
+    }
+
+    .flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
 </style>
