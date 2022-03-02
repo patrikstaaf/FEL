@@ -1,25 +1,29 @@
 <section title="unik copy text">
-  <div class="bg">
-    <div class="max-w-wrapper">
-      <h2>
-        We’re a rare blend of creative grit and calculated impact.<span
-          >Beauty and brains.</span
-        >
-      </h2>
-    </div>
+  <!-- <div class="bg"> -->
+  <img src="/src/images/red-wrinkle-paper.webp" alt="" />
+
+  <div class="max-w-wrapper">
+    <h2>
+      We’re a rare blend of creative grit and calculated impact.<span
+        >Beauty and brains.</span
+      >
+    </h2>
   </div>
+  <!-- </div> -->
 </section>
 
 <style>
   section {
     width: 100%;
-    height: 390px;
+    height: 296px;
   }
 
-  .bg {
+  img {
     width: 100%;
-    height: 100%;
-    background-color: #f82250;
+    height: 296px;
+    position: absolute;
+    /* background-color: #f82250; */
+    z-index: 0;
   }
 
   .max-w-wrapper {
@@ -38,6 +42,7 @@
     line-height: 22px;
     text-align: center;
     max-width: 860px;
+    z-index: 2;
   }
 
   h2 span {
@@ -48,6 +53,14 @@
     .max-w-wrapper h2 {
       font-size: 48px;
       line-height: 45px;
+    }
+
+    section {
+      height: 390px;
+    }
+
+    img {
+      height: 390px;
     }
   }
 </style>

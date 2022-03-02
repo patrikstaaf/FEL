@@ -118,21 +118,21 @@ const buttontexts = 'Läs mer';
   section {
     position: relative;
     width: 100%;
-    height: 1300px;
+    height: 1200px;
   }
 
   .max-w-wrapper {
     max-width: 90rem;
     margin: 0 auto;
     position: relative;
-    height: 1300px;
+    height: 1200px;
     padding: 0 20px;
   }
 
   .mobile-tram {
     position: absolute;
-    top: -5%;
-    left: 30%;
+    top: -3%;
+    left: 35%;
   }
 
   .mobile-tram img {
@@ -174,7 +174,7 @@ const buttontexts = 'Läs mer';
   .lab-img img {
     position: absolute;
     left: 50%;
-    top: 13%;
+    top: 25%;
     /* transform: translateX(-50%); */
     height: 520px;
     width: 1090px;
@@ -209,14 +209,14 @@ const buttontexts = 'Läs mer';
   .mobile-svg {
     position: absolute;
     top: -12%;
-    left: 0%;
+    left: 3%;
     z-index: -2;
   }
 
   .body-text {
     position: absolute;
     max-width: 550px;
-    bottom: 22%;
+    bottom: 8%;
     /* right: 17%; */
   }
 
@@ -263,12 +263,30 @@ const buttontexts = 'Läs mer';
   }
 
   @media screen and (min-width: 800px) {
-    .max-wrapper {
-      padding: 0 60px;
+    section {
+      height: 1400px;
     }
+
+    .max-w-wrapper {
+      height: 1400px;
+    }
+
+    .mobile-tram {
+      top: -5%;
+      left: 30%;
+    }
+
+    .mobile-svg {
+      left: 0%;
+    }
+
+    /* .max-wrapper {
+      padding: 0 60px;
+    } */
 
     .body-text {
       right: 17%;
+      bottom: 22%;
     }
 
     .body-text h2 {
@@ -279,9 +297,18 @@ const buttontexts = 'Läs mer';
       font-size: 20px;
     }
 
-    .lab-image {
-      /* transform: scaleX(1); */
+    /* .lab-image {
+      transform: scaleX(1);
       transform: scaleX(1) translateX(50%);
+    } */
+
+    /* .lab-image img {
+      top: 20%;
+    } */
+
+    .lab-img img {
+      top: 20%;
+      transform: scaleX(1) translateX(-50%);
     }
 
     .dotted-squared-svg {
