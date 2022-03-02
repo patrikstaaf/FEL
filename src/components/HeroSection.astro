@@ -351,17 +351,18 @@
   .hero-img img {
     position: absolute;
     left: 50%;
-    top: 13%;
+    top: 0%;
     transform: translateX(-50%);
     height: 718px;
     width: 1090px;
     object-fit: cover;
+    object-position: 20% 50%;
   }
 
   .hero-text {
     position: absolute;
     left: 16px;
-    top: 55%;
+    top: 36%;
     z-index: 1;
   }
 
@@ -379,7 +380,7 @@
     height: 107px;
     width: 180px;
     left: 0;
-    bottom: 26%;
+    bottom: 45%;
 
     background-color: #f82250;
     mix-blend-mode: multiply;
@@ -395,7 +396,7 @@
 
   .mobile-rect-svg {
     position: absolute;
-    bottom: -20%;
+    bottom: 0%;
     right: 0%;
     z-index: 2;
   }
@@ -404,6 +405,10 @@
   }
 
   @media screen and (min-width: 600px) {
+    .hero-img img {
+      top: 13%;
+    }
+
     .hero-text {
       top: 19%;
       left: 60px;
@@ -430,6 +435,10 @@
       position: absolute;
       bottom: 3%;
       right: 6%;
+    }
+
+    .mobile-rect-svg {
+      bottom: -20%;
     }
   }
 
