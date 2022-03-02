@@ -27,8 +27,10 @@ const buttontexts = "Kontakta oss";
     <div class="image-wrapper">
       <img src="/src/images/contact-section.png" alt="" />
     </div>
-    <span class="style-span-small test-bg"></span>
-    <span class="style-span-large test-bg"></span>
+    <div class="yellow-parent">
+      <span class="style-span-small test-bg"></span>
+      <span class="style-span-large test-bg"></span>
+    </div>
     <div class="content-wrapper">
       <h2 class="test">
         <span class="text-span">Provkör din</span><span class="text-span"
@@ -55,7 +57,10 @@ const buttontexts = "Kontakta oss";
   section {
     position: relative;
     width: 100%;
-    height: 938px;
+    padding-bottom: 64px;
+  }
+  .yellow-parent {
+    position: relative;
   }
 
   h2 {
@@ -92,9 +97,9 @@ const buttontexts = "Kontakta oss";
     display: none;
   }
 
-  .img-wrapper {
+  .img-wrapper img {
     position: absolute;
-    width: 100%;
+    max-width: 375px;
     height: 510px;
   }
 
@@ -109,32 +114,32 @@ const buttontexts = "Kontakta oss";
   .style-span-large {
     position: absolute;
     height: 110px;
-    width: 269px;
+    width: 78%;
     background-color: #f7e733;
     right: 0;
-    bottom: 370px;
+    bottom: -75px;
   }
 
   @media screen and (min-width: 850px) {
+    section {
+      position: relative;
+      width: 100%;
+      height: 800px;
+    }
     .image-wrapper {
       padding-left: 64px;
       position: absolute;
       bottom: 0;
     }
-    .image-wrapper img {
-      width: 533px;
-      height: 718px;
-      object-fit: cover;
-      z-index: 1;
-    }
 
     h2 {
       font-size: 64px;
       line-height: 62px;
+      max-width: 648px;
       z-index: 3;
       position: absolute;
-      left: 22.5%;
-      top: 33%;
+      left: 20.5%;
+      top: 19%;
     }
     h3 {
       font-size: 20px;
@@ -149,31 +154,59 @@ const buttontexts = "Kontakta oss";
       padding-bottom: 20px;
     }
 
+    .yellow-parent {
+      position: absolute;
+    }
+
     .style-span-small {
       position: absolute;
       height: 180px;
       width: 32px;
       background-color: #f7e733;
-      left: 19%;
-      top: 30%;
+      left: 163px;
+      top: 152px;
     }
     .style-span-large {
       position: absolute;
       height: 180px;
       width: 358px;
       background-color: #f7e733;
-      left: 38%;
-      top: 30%;
+      left: 361px;
+      top: 152px;
     }
     .body-text {
       position: absolute;
       padding-left: 10%;
-      max-width: 400px;
+      max-width: 375px;
       bottom: 6%;
-      right: 18%;
+      right: 65px;
+    }
+    .image-wrapper img {
+      width: 320px;
+      height: 718px;
+      object-fit: cover;
+      z-index: 1;
     }
   }
   @media screen and (min-width: 1000px) {
+    .image-wrapper img {
+      width: 533px;
+      height: 718px;
+      object-fit: cover;
+      z-index: 1;
+    }
+  }
+  @media screen and (min-width: 1150px) {
+    .body-text {
+      position: absolute;
+      padding-left: 0;
+      max-width: 494px;
+      padding-bottom: 90px;
+      right: 50px;
+    }
+  }
+
+  @media screen and (min-width: 1350px) {
     .svg-wrapper {
       position: absolute;
       top: 30%;
@@ -181,17 +214,15 @@ const buttontexts = "Kontakta oss";
       display: block;
     }
 
-    .img-wrapper {
-      position: absolute;
-      width: 350px;
-      /* height: 510px; */
+    h2 {
+      left: 14.5%;
     }
-
     .body-text {
       position: absolute;
-      max-width: 500px;
-      bottom: 6%;
-      right: 18%;
+      padding-left: 0;
+      max-width: 494px;
+      padding-bottom: 90px;
+      right: 257px;
     }
   }
 </style>
