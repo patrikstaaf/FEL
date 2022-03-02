@@ -1290,23 +1290,23 @@ const buttontexts = 'Läs mer';
   section {
     position: relative;
     width: 100%;
-    height: 1400px;
+    height: 1300px;
   }
 
   .max-w-wrapper {
     max-width: 90rem;
     margin: 0 auto;
     position: relative;
-    height: 1400px;
+    height: 1300px;
     padding: 0 60px;
   }
 
   .tram-img img {
     position: absolute;
     left: 12%;
-    top: 9%;
+    top: 3%;
     width: 216px;
-    height: 355px;
+    height: 420px;
     object-fit: cover;
     z-index: 1;
     transform: scaleX(-1);
@@ -1328,7 +1328,7 @@ const buttontexts = 'Läs mer';
   }
   .mobile-dotted-right {
     position: absolute;
-    top: 6%;
+    top: 0%;
     right: 4%;
     z-index: -2;
   }
@@ -1344,11 +1344,12 @@ const buttontexts = 'Läs mer';
   .postit-img img {
     position: absolute;
     right: 0%;
-    bottom: 31%;
+    bottom: 29%;
     width: 865px;
     height: 510px;
     object-fit: cover;
     z-index: -1;
+    object-position: 65% 50%;
   }
 
   .red-rect {
@@ -1365,7 +1366,7 @@ const buttontexts = 'Läs mer';
     z-index: 3;
     position: absolute;
     left: 4%;
-    bottom: 25%;
+    bottom: 22%;
     max-width: 570px;
   }
 
@@ -1384,7 +1385,7 @@ const buttontexts = 'Läs mer';
 
     background-color: #f7e733;
     left: 0%;
-    bottom: 23%;
+    bottom: 20%;
   }
 
   .style-span-large {
@@ -1392,7 +1393,7 @@ const buttontexts = 'Läs mer';
 
     background-color: #f7e733;
     left: 17%;
-    bottom: 23%;
+    bottom: 20%;
     width: 83%;
     height: 144px;
   }
@@ -1429,13 +1430,13 @@ const buttontexts = 'Läs mer';
 
   @media screen and (min-width: 430px) {
     .body-text p {
-      font-size: 20px;
-      line-height: 30px;
+      /* font-size: 20px;
+      line-height: 30px; */
     }
 
-    .header {
-      bottom: 22%;
-    }
+    /* .header {
+      bottom: 22%;  
+    } */
 
     .postit-img img {
       right: 14%;
@@ -1447,12 +1448,12 @@ const buttontexts = 'Läs mer';
     }
 
     .style-span-large {
-      width: 269px;
-      bottom: 20%;
+      /* width: 269px; */
+      /* bottom: 20%; */
     }
 
     .style-span-small {
-      bottom: 20%;
+      /* bottom: 20%; */
     }
 
     .mobile-dotted-right {
@@ -1472,6 +1473,11 @@ const buttontexts = 'Läs mer';
     .header h2 {
       font-size: 32px;
       line-height: 35px;
+    }
+
+    .body-text p {
+      font-size: 20px;
+      line-height: 30px;
     }
 
     .header {
@@ -1496,6 +1502,15 @@ const buttontexts = 'Läs mer';
 
     .mobile-dotted-left {
       display: none;
+    }
+
+    .mobile-dotted-right {
+      top: 6%;
+    }
+
+    .tram-img img {
+      top: 9%;
+      height: 355px;
     }
   }
 
@@ -1541,13 +1556,14 @@ const buttontexts = 'Läs mer';
     .rect-svg {
       display: block;
       position: absolute;
-      bottom: 21%;
-      right: 18%;
+      bottom: 17.5%;
+      right: 20%;
       z-index: -2;
     }
 
     .body-text {
-      bottom: 14%;
+      bottom: 10%;
+      left: 25%;
     }
 
     .style-span-small {
@@ -1560,6 +1576,14 @@ const buttontexts = 'Läs mer';
 
     .header {
       bottom: 38%;
+    }
+
+    section {
+      height: 1400px;
+    }
+
+    .max-w-wrapper {
+      height: 1400px;
     }
   }
 </style>
