@@ -1,5 +1,5 @@
 ---
-import Logo from "../components/Logo.astro";
+import Logo from '../components/Logo.astro';
 ---
 
 <nav class="navigation">
@@ -77,9 +77,9 @@ import Logo from "../components/Logo.astro";
 </nav>
 
 <script>
-  const toggleMenu = document.querySelector(".menu button");
-  const closeButton = document.querySelector(".close-button");
-  const menu = document.querySelector(".hamburger-card");
+  const toggleMenu = document.querySelector('.menu button');
+  const closeButton = document.querySelector('.close-button');
+  const menu = document.querySelector('.hamburger-card');
   // const darkModeToggle = document.querySelector(".dark-mode-toggle");
   // let darkMode = localStorage.getItem("darkMode");
 
@@ -113,23 +113,23 @@ import Logo from "../components/Logo.astro";
   //   }
   // });
 
-  toggleMenu.addEventListener("click", function () {
-    const open = JSON.parse(toggleMenu.getAttribute("aria-expanded"));
-    toggleMenu.setAttribute("aria-expanded", !open);
+  toggleMenu.addEventListener('click', function () {
+    const open = JSON.parse(toggleMenu.getAttribute('aria-expanded'));
+    toggleMenu.setAttribute('aria-expanded', !open);
     menu.hidden = !menu.hidden;
 
     if (!menu.hidden) {
-      menu.querySelector("a").focus();
+      menu.querySelector('button').focus();
     }
   });
 
-  closeButton.addEventListener("click", function () {
-    const open = JSON.parse(toggleMenu.getAttribute("aria-expanded"));
-    toggleMenu.setAttribute("aria-expanded", !open);
+  closeButton.addEventListener('click', function () {
+    const open = JSON.parse(toggleMenu.getAttribute('aria-expanded'));
+    toggleMenu.setAttribute('aria-expanded', !open);
     menu.hidden = !menu.hidden;
 
     if (!menu.hidden) {
-      menu.querySelector("a").focus();
+      menu.querySelector('button').focus();
     }
   });
 </script>
