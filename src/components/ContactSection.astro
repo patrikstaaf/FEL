@@ -28,13 +28,13 @@ const buttontexts = "Kontakta oss";
       <img src="/src/images/contact-section.png" alt="" />
     </div>
     <span class="style-span-small test-bg"></span>
+    <span class="style-span-large test-bg"></span>
     <div class="content-wrapper">
       <h2 class="test">
         <span class="text-span">Provkör din</span><span class="text-span"
           >verksamhets framtid</span
         >
       </h2>
-      <span class="style-span-large test-bg"></span>
       <div class="body-text">
         <h3>
           Behöver du också ett Future Experience Lab för din verksamhets
@@ -84,6 +84,7 @@ const buttontexts = "Kontakta oss";
   }
 
   .content-wrapper {
+    max-width: 500px;
     padding-right: 16px;
     padding-left: 24px;
   }
@@ -111,14 +112,14 @@ const buttontexts = "Kontakta oss";
     width: 269px;
     background-color: #f7e733;
     right: 0;
-    bottom: 200px;
+    bottom: 370px;
   }
 
   @media screen and (min-width: 850px) {
     .image-wrapper {
       padding-left: 64px;
       position: absolute;
-      bottom: -9%;
+      bottom: 0;
     }
     .image-wrapper img {
       width: 533px;
@@ -127,20 +128,13 @@ const buttontexts = "Kontakta oss";
       z-index: 1;
     }
 
-    .svg-wrapper {
-      position: absolute;
-      top: 30%;
-      right: 0;
-      display: block;
-    }
-
     h2 {
       font-size: 64px;
       line-height: 62px;
       z-index: 3;
       position: absolute;
       left: 22.5%;
-      top: 43%;
+      top: 33%;
     }
     h3 {
       font-size: 20px;
@@ -161,7 +155,7 @@ const buttontexts = "Kontakta oss";
       width: 32px;
       background-color: #f7e733;
       left: 19%;
-      top: 40%;
+      top: 30%;
     }
     .style-span-large {
       position: absolute;
@@ -169,8 +163,30 @@ const buttontexts = "Kontakta oss";
       width: 358px;
       background-color: #f7e733;
       left: 38%;
-      top: 40%;
+      top: 30%;
     }
+    .body-text {
+      position: absolute;
+      padding-left: 10%;
+      max-width: 400px;
+      bottom: 6%;
+      right: 18%;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .svg-wrapper {
+      position: absolute;
+      top: 30%;
+      right: 0;
+      display: block;
+    }
+
+    .img-wrapper {
+      position: absolute;
+      width: 350px;
+      /* height: 510px; */
+    }
+
     .body-text {
       position: absolute;
       max-width: 500px;
