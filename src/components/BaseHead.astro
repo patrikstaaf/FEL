@@ -11,16 +11,19 @@ const { title, description, canonicalURL } = Astro.props;
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+
 <!-- Sitemap -->
-<!-- <link rel="sitemap" href="/sitemap.xml" /> -->
+<link rel="sitemap" href="/sitemap.xml" />
+
 <!-- Canonical -->
 <link rel="canonical" href={canonicalURL} />
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonicalURL} />
@@ -28,6 +31,7 @@ const { title, description, canonicalURL } = Astro.props;
 <meta property="og:description" content={description} />
 <meta property="og:locale" content="sv_SE" />
 <!-- <meta property="og:image" content="assets/img/social.jpg" /> -->
+
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={canonicalURL} />
@@ -35,14 +39,12 @@ const { title, description, canonicalURL } = Astro.props;
 <meta property="twitter:description" content={description} />
 <!-- <meta property="twitter:image" content="assets/img/twitter.jpg" /> -->
 
-<style global>
-  @import "../styles/global.css";
+<script type="module" defer>
+  import Rellax from 'rellax';
 
-  /* body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    --body-regular: "Montserrat-Regular", sans-serif;
-    --body-bold: "Montserrat-Bold", sans-serif;
-    --heading: "ClashDisplay-SemiBold", sans-serif;
-  } */
+  var rellax = new Rellax('.rellax');
+</script>
+
+<style global>
+  @import '../styles/global.css';
 </style>
