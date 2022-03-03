@@ -96,11 +96,9 @@ const buttontexts = "Kontakta oss";
   .svg-wrapper {
     display: none;
   }
-
-  .img-wrapper img {
-    position: absolute;
-    max-width: 375px;
-    height: 510px;
+  .image-wrapper {
+    position: relative;
+    z-index: -2;
   }
 
   .style-span-small {
@@ -214,7 +212,9 @@ const buttontexts = "Kontakta oss";
 
   @media screen and (min-width: 1350px) {
     h2 {
-      left: 14.5%;
+      max-width: 688px;
+      left: 14%;
+      top: 23%;
     }
     .body-text {
       position: absolute;
