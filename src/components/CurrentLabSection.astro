@@ -4,6 +4,12 @@ import MainButton from '../components/MainButton.astro';
 const buttontexts = 'Läs mer';
 ---
 
+<script type="module">
+  import Rellax from 'rellax';
+
+  var rellax = new Rellax('.rellax');
+</script>
+
 <section title="aktuellt lab">
   <div class="max-w-wrapper">
     <div class="wall-img">
@@ -12,7 +18,7 @@ const buttontexts = 'Läs mer';
     <div class="lab-img">
       <img src="/src/images/current-lab-lab01.webp" alt="" />
     </div>
-    <div class="eye-img">
+    <div class="eye-img rellax" data-rellax-speed="0.5">
       <img src="/src/images/current-lab-eye.webp" alt="" />
     </div>
     <div class="mobile-tram">
@@ -54,7 +60,7 @@ const buttontexts = 'Läs mer';
           stroke-dasharray="20 20"></circle>
       </svg>
     </div>
-    <div class="empty-circle-svg">
+    <div class="empty-circle-svg rellax" data-rellax-speed="-0.5">
       <svg
         width="421"
         height="422"
@@ -72,7 +78,7 @@ const buttontexts = 'Läs mer';
           stroke-width="30"></rect>
       </svg>
     </div>
-    <div class="full-circle-svg">
+    <div class="full-circle-svg rellax" data-rellax-speed="-0.5">
       <svg
         width="384"
         height="384"
@@ -84,7 +90,7 @@ const buttontexts = 'Läs mer';
         ></circle>
       </svg>
     </div>
-    <div class="dotted-squared-svg">
+    <div class="dotted-squared-svg rellax" data-rellax-speed="0.5">
       <svg
         width="143"
         height="143"

@@ -4,6 +4,12 @@ import MainButton from '../components/MainButton.astro';
 const buttontexts = 'Läs mer';
 ---
 
+<script type="module">
+  import Rellax from 'rellax';
+
+  var rellax = new Rellax('.rellax');
+</script>
+
 <section title="intro">
   <div class="max-w-wrapper">
     <div class="dotted-top-svg">
@@ -24,7 +30,7 @@ const buttontexts = 'Läs mer';
           stroke-dasharray="20 20"></circle>
       </svg>
     </div>
-    <div class="tram-img">
+    <div class="tram-img rellax" data-rellax-speed="-1">
       <img src="/src/images/intro-tram.webp" alt="" />
     </div>
     <div class="mobile-dotted-left">
@@ -102,7 +108,7 @@ const buttontexts = 'Läs mer';
     <div class="postit-img">
       <img src="/src/images/intro-postit.webp" alt="" />
     </div>
-    <div class="red-rect"></div>
+    <div class="red-rect rellax" data-rellax-speed="1"></div>
     <span class="style-span-small test-bg"></span>
     <div class="header">
       <h2>
@@ -113,7 +119,7 @@ const buttontexts = 'Läs mer';
       </h2>
     </div>
     <span class="style-span-large test-bg"></span>
-    <div class="rect-svg">
+    <div class="rect-svg rellax" data-rellax-speed="0.5">
       <svg
         width="233"
         height="172"
